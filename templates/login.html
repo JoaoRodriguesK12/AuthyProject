@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <style>
+    body { font-family: Arial, sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; background: #f0f2f5; margin: 0; }
+    .card { background: #fff; padding: 32px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,.15); width: 300px; }
+    input, button { width: 100%; padding: 10px; margin-top: 12px; box-sizing: border-box; }
+    button { background: #1a73e8; color: #fff; border: 0; border-radius: 4px; cursor: pointer; }
+    .erro { color: #c62828; margin-top: 12px; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>Login</h2>
+    <form method="post">
+      <input type="text" name="username" placeholder="Usuário" required>
+      <input type="password" name="password" placeholder="Senha" required>
+      <button type="submit">Entrar</button>
+    </form>
+    {% if erro %}<p class="erro">{{ erro }}</p>{% endif %}
+  </div>
+</body>
+</html>
